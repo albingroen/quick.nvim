@@ -44,7 +44,7 @@ download a release from there.
 
 ## Bindings
 
-**<leader>** = "<Space/>"
+**\<leader\>** = "\<Space/\>"
 
 | Plugin    | Mapping       | Action                         |
 | --------- | ------------- | ------------------------------ |
