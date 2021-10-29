@@ -2,6 +2,8 @@
 
 A very fast Lua based Neovim configuration that uses coc.nvim for intellisense
 
+![screenshot](https://user-images.githubusercontent.com/19674362/139430752-07861315-9610-47c8-8ffc-a48dcab44a95.png)
+
 ## Plugins
 
 - [Packer](https://github.com/wbthomason/packer.nvim)
