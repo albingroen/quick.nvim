@@ -40,35 +40,35 @@ On the other hand, if you want a raw folder with the configuration files,
 without git connected to it, you can head over to the releases page, and
 download a release from there.
 
-### [> Releases <](https://github.com/albingroen/quick.nvim/releases)
+### [\> Releases \<](https://github.com/albingroen/quick.nvim/releases)
 
 ## Bindings
 
-| Plugin    | Mapping     | Action                         |
-|-----------|-------------|--------------------------------|
-| Telescope | <C-P>       | Open file picker               |
-| Telescope | <C-F>       | Open project search            |
-| Telescope | <C-B>       | Open buffer picker             |
-| Telescope | <C-T>       | Open Git worktree picker       |
-| COC       | <leader>.   | Open code actions              |
-| COC       | <leader>l   | Execute code autofix           |
-| COC       | gd          | Go to definition               |
-| COC       | K           | Hover over symbol              |
-| COC       | <leader> rn | Rename symbol                  |
-| COC       | <leader>f   | Format file with prettier      |
-| COC       | <C-Space>   | Open autocompletion            |
-| COC       | <TAB>       | Browse next autocompletion     |
-| COC       | <S-TAB>     | Browse previous autocompletion |
-| COC       | <CR>        | Select autocompletion          |
-|           | vs          | Split window vertically        |
-|           | sp          | Split window horizontally      |
-|           | <C-H>       | Move one split to left         |
-|           | <C-J>       | Move one split to below        |
-|           | <C-K>       | Move one split up              |
-|           | <C-L>       | Move one split right           |
-|           | tn          | Create a new tab               |
-|           | tk          | Move one tab to the right      |
-|           | tj          | Move one tab to the left       |
-|           | to          | Close all other tabs           |
-|           | <C-S>       | Open search & replace          |
-|           | <C-N>       | Open file explorer             |
+| Plugin    | Mapping       | Action                         |
+| --------- | ------------- | ------------------------------ |
+| Telescope | \<C-P\>       | Open file picker               |
+| Telescope | \<C-F\>       | Open project search            |
+| Telescope | \<C-B\>       | Open buffer picker             |
+| Telescope | \<C-T\>       | Open Git worktree picker       |
+| COC       | \<leader\>.   | Open code actions              |
+| COC       | \<leader\>l   | Execute code autofix           |
+| COC       | gd            | Go to definition               |
+| COC       | K             | Hover over symbol              |
+| COC       | \<leader\> rn | Rename symbol                  |
+| COC       | \<leader\>f   | Format file with prettier      |
+| COC       | \<C-Space\>   | Open autocompletion            |
+| COC       | \<TAB\>       | Browse next autocompletion     |
+| COC       | \<S-TAB\>     | Browse previous autocompletion |
+| COC       | \<CR\>        | Select autocompletion          |
+|           | vs            | Split window vertically        |
+|           | sp            | Split window horizontally      |
+|           | \<C-H\>       | Move one split to left         |
+|           | \<C-J\>       | Move one split to below        |
+|           | \<C-K\>       | Move one split up              |
+|           | \<C-L\>       | Move one split right           |
+|           | tn            | Create a new tab               |
+|           | tk            | Move one tab to the right      |
+|           | tj            | Move one tab to the left       |
+|           | to            | Close all other tabs           |
+|           | \<C-S\>       | Open search & replace          |
+|           | \<C-N\>       | Open file explorer             |
