@@ -60,16 +60,16 @@ download a release from there.
 |           | tn           | Create a new tab               |
 |           | to           | Close all other tabs           |
 |           | vs           | Split window vertically        |
-| COC       | K            | Hover over symbol              |
-| COC       | \<C-Space\>  | Open autocompletion            |
-| COC       | \<CR\>       | Select autocompletion          |
-| COC       | \<S-TAB\>    | Browse previous autocompletion |
-| COC       | \<TAB\>      | Browse next autocompletion     |
-| COC       | \<leader\>.  | Open code actions              |
-| COC       | \<leader\>f  | Format file with prettier      |
-| COC       | \<leader\>l  | Execute code autofix           |
-| COC       | \<leader\>rn | Rename symbol                  |
-| COC       | gd           | Go to definition               |
+| coc       | K            | Hover over symbol              |
+| coc       | \<C-Space\>  | Open autocompletion            |
+| coc       | \<CR\>       | Select autocompletion          |
+| coc       | \<S-TAB\>    | Browse previous autocompletion |
+| coc       | \<TAB\>      | Browse next autocompletion     |
+| coc       | \<leader\>.  | Open code actions              |
+| coc       | \<leader\>f  | Format file with prettier      |
+| coc       | \<leader\>l  | Execute code autofix           |
+| coc       | \<leader\>rn | Rename symbol                  |
+| coc       | gd           | Go to definition               |
 | Telescope | \<C-B\>      | Open buffer picker             |
 | Telescope | \<C-F\>      | Open project search            |
 | Telescope | \<C-P\>      | Open file picker               |
