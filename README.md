@@ -12,6 +12,6 @@ A very fast Lua based Neovim configuration that uses coc.nvim for intellisense
 - [git-worktree](https://github.com/ThePrimeagen/git-worktree.nvim)
 - [Lualine](https://github.com/nvim-lualine/lualine.nvim)
 - [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons)
-- [Telesceope](https://github.com/nvim-telescope/telescope.nvim)
+- [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [Plenary](https://github.com/nvim-lua/plenary.nvim)
 - [Surround](https://github.com/blackCauldron7/surround.nvim)
