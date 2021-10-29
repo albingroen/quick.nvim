@@ -23,9 +23,9 @@ features.
 - [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [coc](https://github.com/neoclide/coc.nvim)
 - [git-worktree](https://github.com/ThePrimeagen/git-worktree.nvim)
+- [nvim-ts-context-commentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring)
 - [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons)
 - [vim-commentary](https://github.com/tpope/vim-commentary/)
-- [nvim-ts-context-commentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring)
 
 ## Setup quick.nvim
 
