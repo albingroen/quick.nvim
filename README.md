@@ -33,7 +33,7 @@ this repository into your `.config` directory, or wherever you keep your
 current Neovim configuration.
 
 ```sh
-git clone git@github.com:albingroen/quick.nvim.git **~/.config/nvim**
+git clone git@github.com:albingroen/quick.nvim.git ~/.config/nvim
 ```
 
 On the other hand, if you want a raw folder with the configuration files,
