@@ -14,17 +14,17 @@ features.
 
 ## Plugins
 
-- [Packer](https://github.com/wbthomason/packer.nvim)
-- [coc](https://github.com/neoclide/coc.nvim)
-- [Tokyo Night](https://github.com/folke/tokyonight.nvim)
-- [tcomment](https://github.com/tomtom/tcomment_vim)
-- [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- [git-worktree](https://github.com/ThePrimeagen/git-worktree.nvim)
 - [Lualine](https://github.com/nvim-lualine/lualine.nvim)
-- [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons)
-- [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+- [Packer](https://github.com/wbthomason/packer.nvim)
 - [Plenary](https://github.com/nvim-lua/plenary.nvim)
 - [Surround](https://github.com/blackCauldron7/surround.nvim)
+- [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+- [Tokyo Night](https://github.com/folke/tokyonight.nvim)
+- [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [coc](https://github.com/neoclide/coc.nvim)
+- [git-worktree](https://github.com/ThePrimeagen/git-worktree.nvim)
+- [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons)
+- [tcomment](https://github.com/tomtom/tcomment_vim)
 
 ## Setup quick.nvim
 
@@ -48,29 +48,29 @@ download a release from there.
 
 | Plugin    | Mapping      | Action                         |
 | --------- | ------------ | ------------------------------ |
-| Telescope | \<C-P\>      | Open file picker               |
-| Telescope | \<C-F\>      | Open project search            |
-| Telescope | \<C-B\>      | Open buffer picker             |
-| Telescope | \<C-T\>      | Open Git worktree picker       |
-| COC       | \<leader\>.  | Open code actions              |
-| COC       | \<leader\>l  | Execute code autofix           |
-| COC       | gd           | Go to definition               |
-| COC       | K            | Hover over symbol              |
-| COC       | \<leader\>rn | Rename symbol                  |
-| COC       | \<leader\>f  | Format file with prettier      |
-| COC       | \<C-Space\>  | Open autocompletion            |
-| COC       | \<TAB\>      | Browse next autocompletion     |
-| COC       | \<S-TAB\>    | Browse previous autocompletion |
-| COC       | \<CR\>       | Select autocompletion          |
-|           | vs           | Split window vertically        |
-|           | sp           | Split window horizontally      |
 |           | \<C-H\>      | Move one split left            |
 |           | \<C-J\>      | Move one split down            |
 |           | \<C-K\>      | Move one split up              |
 |           | \<C-L\>      | Move one split right           |
-|           | tn           | Create a new tab               |
-|           | tk           | Move one tab right             |
-|           | tj           | Move one tab left              |
-|           | to           | Close all other tabs           |
-|           | \<C-S\>      | Open search & replace          |
 |           | \<C-N\>      | Open file explorer             |
+|           | \<C-S\>      | Open search & replace          |
+|           | sp           | Split window horizontally      |
+|           | tj           | Move one tab left              |
+|           | tk           | Move one tab right             |
+|           | tn           | Create a new tab               |
+|           | to           | Close all other tabs           |
+|           | vs           | Split window vertically        |
+| COC       | K            | Hover over symbol              |
+| COC       | \<C-Space\>  | Open autocompletion            |
+| COC       | \<CR\>       | Select autocompletion          |
+| COC       | \<S-TAB\>    | Browse previous autocompletion |
+| COC       | \<TAB\>      | Browse next autocompletion     |
+| COC       | \<leader\>.  | Open code actions              |
+| COC       | \<leader\>f  | Format file with prettier      |
+| COC       | \<leader\>l  | Execute code autofix           |
+| COC       | \<leader\>rn | Rename symbol                  |
+| COC       | gd           | Go to definition               |
+| Telescope | \<C-B\>      | Open buffer picker             |
+| Telescope | \<C-F\>      | Open project search            |
+| Telescope | \<C-P\>      | Open file picker               |
+| Telescope | \<C-T\>      | Open Git worktree picker       |
