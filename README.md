@@ -65,7 +65,7 @@ download a release from there.
 |           | vs           | Split window vertically        |
 |           | sp           | Split window horizontally      |
 |           | \<C-H\>      | Move one split left            |
-|           | \<C-J\>      | Move one split below           |
+|           | \<C-J\>      | Move one split down            |
 |           | \<C-K\>      | Move one split up              |
 |           | \<C-L\>      | Move one split right           |
 |           | tn           | Create a new tab               |
