@@ -32,7 +32,9 @@ If you want to receive updates as this configuration gets patched, then clone
 this repository into your `.config` directory, or wherever you keep your
 current Neovim configuration.
 
-```sh git clone git@github.com:albingroen/quick.nvim.git **~/.config/nvim** ```
+```sh
+git clone git@github.com:albingroen/quick.nvim.git **~/.config/nvim**
+```
 
 On the other hand, if you want a raw folder with the configuration files,
 without git connected to it, you can head over to the releases page, and
