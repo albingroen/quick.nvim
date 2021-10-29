@@ -44,6 +44,8 @@ download a release from there.
 
 ## Bindings
 
+**<leader>** = "<Space/>"
+
 | Plugin    | Mapping       | Action                         |
 | --------- | ------------- | ------------------------------ |
 | Telescope | \<C-P\>       | Open file picker               |
@@ -54,7 +56,7 @@ download a release from there.
 | COC       | \<leader\>l   | Execute code autofix           |
 | COC       | gd            | Go to definition               |
 | COC       | K             | Hover over symbol              |
-| COC       | \<leader\> rn | Rename symbol                  |
+| COC       | \<leader\>rn | Rename symbol                  |
 | COC       | \<leader\>f   | Format file with prettier      |
 | COC       | \<C-Space\>   | Open autocompletion            |
 | COC       | \<TAB\>       | Browse next autocompletion     |
