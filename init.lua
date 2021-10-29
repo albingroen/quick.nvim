@@ -4,12 +4,26 @@ require('telescope-config')
 require('coc-config')
 require('lualine').setup()
 
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained",
+  context_commentstring = {
+    enable = true
+  },
+  highlight = {
+    enable = true
+  },
+  indent = {
+    enable = true
+  }
+}
+
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
   use {'neoclide/coc.nvim', branch = 'release'}
   use 'folke/tokyonight.nvim'
-  use 'tomtom/tcomment_vim'
   use 'nvim-treesitter/nvim-treesitter' 
+  use 'tpope/vim-commentary'
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
   use 'ThePrimeagen/git-worktree.nvim'
   use {
     'nvim-lualine/lualine.nvim',

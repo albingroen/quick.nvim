@@ -24,7 +24,8 @@ features.
 - [coc](https://github.com/neoclide/coc.nvim)
 - [git-worktree](https://github.com/ThePrimeagen/git-worktree.nvim)
 - [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons)
-- [tcomment](https://github.com/tomtom/tcomment_vim)
+- [vim-commentary](https://github.com/tpope/vim-commentary/)
+- [nvim-ts-context-commentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring)
 
 ## Setup quick.nvim
 
