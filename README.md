@@ -10,7 +10,7 @@ implement the native Neovim LSP, since I don't think it's good enough yet for
 Svelte development. It's very fast, good looking, and has a lot of nice
 features.
 
-![screenshot](https://user-images.githubusercontent.com/19674362/139430752-07861315-9610-47c8-8ffc-a48dcab44a95.png)
+<img width="1280" alt="quick nvim" src="https://user-images.githubusercontent.com/19674362/139526562-a3a9f9f8-ada7-40d6-a2a8-2c534a97e0a5.png">
 
 ## Plugins
 
