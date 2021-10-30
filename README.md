@@ -12,6 +12,8 @@ features.
 
 <img width="1280" alt="quick nvim" src="https://user-images.githubusercontent.com/19674362/139526562-a3a9f9f8-ada7-40d6-a2a8-2c534a97e0a5.png">
 
+https://user-images.githubusercontent.com/19674362/139526856-bdd9023d-8780-4b0f-aa4b-4edb619e35fd.mp4
+
 ## Plugins
 
 - [Lualine](https://github.com/nvim-lualine/lualine.nvim)
