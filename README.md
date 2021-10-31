@@ -57,6 +57,7 @@ download a release from there.
 |           | \<C-L\>      | Move one split right           |
 |           | \<C-N\>      | Open file explorer             |
 |           | \<C-S\>      | Open search & replace          |
+|           | \<leader-t\> | Open a terminal buffer         |
 |           | sp           | Split window horizontally      |
 |           | tj           | Move one tab left              |
 |           | tk           | Move one tab right             |
