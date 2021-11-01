@@ -45,7 +45,7 @@ download a release from there.
 
 ### [\> Releases \<](https://github.com/albingroen/quick.nvim/releases)
 
-## COC
+## coc.nvim
 
 This configuration uses [coc.nvim](https://github.com/neoclide/coc.nvim) for
 intellisense, instead of the built-in Neovim LSP. This is because I think it's
