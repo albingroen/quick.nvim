@@ -37,22 +37,14 @@ vim.api.nvim_set_keymap('n', '<C-N>', ':call ToggleNetrw()<CR>', { noremap = tru
 vim.api.nvim_set_keymap("n", "<leader>t", ":sp<CR> :term<CR> :resize 20N<CR> i", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", {noremap = true, silent = true})
 
+vim.g["NetrwIsOpen"] = 0
+vim.g["netrw_banner"] = 0
+vim.g["netrw_liststyle"] = 3
+vim.g["netrw_winsize"] = 25
+
 vim.api.nvim_exec(
 [[
-" Better code indentation
 filetype plugin indent on
-
-" Explorer is closed by default
-let g:NetrwIsOpen=0
-
-" Disable top information
-let g:netrw_banner = 0
-
-" Use nested tree style explorer
-let g:netrw_liststyle = 3
-
-" Explorer takes up 25% of screen
-let g:netrw_winsize = 25
 
 function! ToggleNetrw()
     if g:NetrwIsOpen
