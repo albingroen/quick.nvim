@@ -2,13 +2,13 @@
 
 A very fast Lua based Neovim configuration that uses coc.nvim for intellisense
 
-- [What is this?](#What-is-this?)
-- [Plugins](#Plugins)
-- [Setup](#Setup-quick.nvim)
-  - [Releases](#>-Releases-<)
+- [What is this?](#what-is-this)
+- [Plugins](#plugins)
+- [Setup](#setup-quick.nvim)
+  - [Releases](#>-releases-<)
 - [coc.nvim](#coc.nvim)
-- [Bindings](#Bindings)
-- [Maintainers](#Maintainers)
+- [Bindings](#bindings)
+- [Maintainers](#maintainers)
 
 ## What is this?
 
