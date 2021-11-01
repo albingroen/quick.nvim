@@ -4,9 +4,9 @@ A very fast Lua based Neovim configuration that uses coc.nvim for intellisense
 
 - [What is this?](#what-is-this)
 - [Plugins](#plugins)
-- [Setup](#setup-quick.nvim)
-  - [Releases](#>-releases-<)
-- [coc.nvim](#coc.nvim)
+- [Setup](#setup-quicknvim)
+  - [Releases](#-releases-)
+- [coc.nvim](#cocnvim)
 - [Bindings](#bindings)
 - [Maintainers](#maintainers)
 
