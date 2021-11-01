@@ -94,3 +94,7 @@ this.
 | Telescope | \<C-F\>      | Open project search            |
 | Telescope | \<C-P\>      | Open file picker               |
 | Telescope | \<C-T\>      | Open Git worktree picker       |
+
+## Maintainers
+
+- [Albin Groen](https://github.com/albingroen)
