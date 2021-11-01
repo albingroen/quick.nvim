@@ -2,6 +2,14 @@
 
 A very fast Lua based Neovim configuration that uses coc.nvim for intellisense
 
+- [What is this?](#What-is-this?)
+- [Plugins](#Plugins)
+- [Setup](#Setup-quick.nvim)
+  - [Releases](#>-Releases-<)
+- [coc.nvim](#coc.nvim)
+- [Bindings](#Bindings)
+- [Maintainers](#Maintainers)
+
 ## What is this?
 
 This is my configuration for Neovim. It's mostly written in Lua, and uses
