@@ -4,8 +4,11 @@ A very fast Lua based Neovim configuration that uses coc.nvim for intellisense
 
 - [What is this?](#what-is-this)
 - [Plugins](#plugins)
+- [Prerequisites](#prerequisites)
 - [Setup](#setup-quicknvim)
-  - [Releases](#-releases-)
+  - [Download cofiguration](#download-configuration)
+    - [Releases](#releases)
+  - [Install plugins](#install-plugins)
 - [coc.nvim](#cocnvim)
 - [Bindings](#bindings)
 - [Maintainers](#maintainers)
@@ -36,7 +39,16 @@ https://user-images.githubusercontent.com/19674362/139526856-bdd9023d-8780-4b0f-
 - [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons)
 - [vim-commentary](https://github.com/tpope/vim-commentary/)
 
+## Prerequisites
+
+- [Neovim 0.5 or above](https://neovim.io)
+- [Node.js](https://nodejs.org)
+
 ## Setup quick.nvim
+
+### 1. Download configuration
+
+#### Clone repository
 
 If you want to receive updates as this configuration gets patched, then clone
 this repository into your `.config` directory, or wherever you keep your
@@ -46,11 +58,25 @@ current Neovim configuration.
 git clone git@github.com:albingroen/quick.nvim.git ~/.config/nvim
 ```
 
+#### Releases
+
 On the other hand, if you want a raw folder with the configuration files,
 without git connected to it, you can head over to the releases page, and
 download a release from there.
 
-### [\> Releases \<](https://github.com/albingroen/quick.nvim/releases)
+https://github.com/albingroen/quick.nvim/releases
+
+### 2. Install plugins
+
+To install the plugins used by quick.nvim, you need to do so using Packer.
+
+```
+nvim ~/.config/nvim/init.lua
+```
+
+```
+:PackerInstall
+```
 
 ## coc.nvim
 
