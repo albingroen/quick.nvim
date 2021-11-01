@@ -12,10 +12,9 @@ A very fast Lua based Neovim configuration that uses coc.nvim for intellisense
 
 ## What is this?
 
-This is a configuration for Neovim. It's mostly written in Lua, and uses
-modern plugins like Treesitter, Telescope, and Lualine. It does however not
-implement the native Neovim LSP, since I don't think it's good enough yet for
-Svelte development. It's very fast, good looking, and has a lot of nice
+This is a configuration for Neovim. It's mostly written in Lua, and uses modern
+plugins like Treesitter, Telescope, and Lualine. It does however not implement
+the native Neovim LSP. It's very fast, good looking, and has a lot of nice
 features.
 
 <img width="1280" alt="quick nvim" src="https://user-images.githubusercontent.com/19674362/139526562-a3a9f9f8-ada7-40d6-a2a8-2c534a97e0a5.png">
