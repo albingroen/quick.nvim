@@ -45,6 +45,22 @@ download a release from there.
 
 ### [\> Releases \<](https://github.com/albingroen/quick.nvim/releases)
 
+## COC
+
+This configuration uses [coc.nvim](https://github.com/neoclide/coc.nvim) for
+intellisense, instead of the built-in Neovim LSP. This is because I think it's
+not quite mature yet, pretty tricky to configure, and doesn't have a quite as
+many languages and frameworks supported as coc yet.
+
+quick.nvim doesn't ship with any default coc plugins though, so you have to
+install the ones you want to use. For example if you want to use quick.nvim for
+TypeScript programming, you'll have to install the coc-tsserver plugin like
+this.
+
+```
+:CocInstall coc-tsserver
+```
+
 ## Bindings
 
 **\<leader\>** = "\<Space/\>"
