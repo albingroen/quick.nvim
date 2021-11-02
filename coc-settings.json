@@ -1,0 +1,21 @@
+{
+  "suggest.enablePreselect": true,
+  "suggest.noselect": false,
+  "suggest.snippetIndicator": "  ►",
+  "suggest.triggerAfterInsertEnter": true,
+  "suggest.autoTrigger": "always",
+  "coc.preferences.formatOnSaveFiletypes": [
+          "html",
+          "css",
+          "javascript",
+          "py"
+  ],
+  "coc.preferences.colorSupport": false,
+  "diagnostic.errorSign": "•",
+  "diagnostic.warningSign": "!",
+  "diagnostic.infoSign": "¶",
+  "diagnostic.virtualText": true,
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snippets",
+  "snippets.ultisnips.enable": false,
+  "snippets.ultisnips.usePythonx": false
+}
