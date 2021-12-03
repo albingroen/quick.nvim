@@ -9,6 +9,7 @@ A very fast Lua based Neovim configuration that uses coc.nvim for intellisense
   - [Download cofiguration](#1-download-configuration)
     - [Releases](#releases)
   - [Install plugins](#2-install-plugins)
+    - [Install Packer](#install-packer)
 - [coc.nvim](#cocnvim)
 - [Bindings](#bindings)
 - [Maintainers](#maintainers)
@@ -67,6 +68,16 @@ download a release from there.
 https://github.com/albingroen/quick.nvim/releases
 
 ### 2. Install plugins
+
+#### Install Packer
+
+quick.nvim uses [Packer](https://github.com/wbthomason/packer.nvim) as its
+Neovim plugin manager.
+
+```
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
 
 To install the plugins used by quick.nvim, you need to do so using Packer.
 
