@@ -89,7 +89,7 @@ nvim ~/.config/nvim/init.lua
 :PackerInstall
 ```
 
-PS. If you're having trouble running `:PackerInstall`, follow the instructions in this issue:https://github.com/albingroen/quick.nvim/issues/2
+PS. If you're having trouble running `:PackerInstall` after this, please follow the instructions in this issue: https://github.com/albingroen/quick.nvim/issues/2
 
 ## coc.nvim
 
