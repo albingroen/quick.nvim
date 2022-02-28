@@ -1,5 +1,7 @@
 # quick.nvim
 
+[YouTube Demo](https://www.youtube.com/watch?v=OhbgZbORFd4)
+
 A very fast Lua based Neovim configuration that uses coc.nvim for intellisense
 
 - [What is this?](#what-is-this)
