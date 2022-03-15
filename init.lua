@@ -10,7 +10,8 @@ require'nvim-treesitter.configs'.setup {
     enable = true
   },
   highlight = {
-    enable = true
+    enable = true,
+    disable = { "lua" }
   },
   indent = {
     enable = true
@@ -24,7 +25,6 @@ return require('packer').startup(function()
   use 'nvim-treesitter/nvim-treesitter' 
   use 'tpope/vim-commentary'
   use 'JoosepAlviste/nvim-ts-context-commentstring'
-  use 'ThePrimeagen/git-worktree.nvim'
   use {
     'nvim-lualine/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true}

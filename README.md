@@ -37,7 +37,6 @@ https://user-images.githubusercontent.com/19674362/139526856-bdd9023d-8780-4b0f-
 - [Tokyo Night](https://github.com/folke/tokyonight.nvim)
 - [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [coc](https://github.com/neoclide/coc.nvim)
-- [git-worktree](https://github.com/ThePrimeagen/git-worktree.nvim)
 - [nvim-ts-context-commentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring)
 - [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons)
 - [vim-commentary](https://github.com/tpope/vim-commentary/)
@@ -141,7 +140,6 @@ this.
 | Telescope | \<C-B\>      | Open buffer picker             |
 | Telescope | \<C-F\>      | Open project search            |
 | Telescope | \<C-P\>      | Open file picker               |
-| Telescope | \<C-T\>      | Open Git worktree picker       |
 
 ## Maintainers
 
