@@ -2,7 +2,6 @@ require('basics')
 require('colors')
 require('telescope-config')
 require('coc-config')
-require('lualine').setup()
 
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "all",
@@ -26,14 +25,12 @@ return require('packer').startup(function()
   use 'nvim-treesitter/nvim-treesitter' 
   use 'tpope/vim-commentary'
   use 'JoosepAlviste/nvim-ts-context-commentstring'
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = {'kyazdani42/nvim-web-devicons', opt = true}
-  }
+  use 'lukas-reineke/indent-blankline.nvim'
   use {
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+  use { "nvim-telescope/telescope-file-browser.nvim" }
   use {
     "blackCauldron7/surround.nvim",
     config = function()
