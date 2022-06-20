@@ -92,6 +92,16 @@ nvim ~/.config/nvim/init.lua
 
 PS. If you're having trouble running `:PackerInstall` after this, please follow the instructions in this issue: https://github.com/albingroen/quick.nvim/issues/2
 
+### Install ripgrep
+
+In order for the Telescope live_grep functionality to work, you need to have
+ripgrep installed on your machine. Please reference the official ripgrep
+installation options, but if run Homebrew, you can install it like this.
+
+```
+brew install rg
+```
+
 ## coc.nvim
 
 This configuration uses [coc.nvim](https://github.com/neoclide/coc.nvim) for
