@@ -32,7 +32,7 @@ return require('packer').startup(function()
   }
   use { "nvim-telescope/telescope-file-browser.nvim" }
   use {
-    "blackCauldron7/surround.nvim",
+    "ur4ltz/surround.nvim",
     config = function()
       require"surround".setup {mappings_style = "surround"}
     end
