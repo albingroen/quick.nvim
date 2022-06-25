@@ -37,7 +37,7 @@ https://user-images.githubusercontent.com/19674362/139526856-bdd9023d-8780-4b0f-
 - [Plenary](https://github.com/nvim-lua/plenary.nvim)
 - [Surround](https://github.com/blackCauldron7/surround.nvim)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
-- [Tokyo Night](https://github.com/folke/tokyonight.nvim)
+- [GitHub Theme](https://github.com/projekt0n/github-nvim-theme)
 - [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [coc](https://github.com/neoclide/coc.nvim)
 - [nvim-ts-context-commentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring)
