@@ -4,17 +4,20 @@
 
 A very fast Lua based Neovim configuration that uses coc.nvim for intellisense
 
-- [What is this?](#what-is-this)
-- [Plugins](#plugins)
-- [Prerequisites](#prerequisites)
-- [Setup](#setup-quicknvim)
-  - [Download cofiguration](#1-download-configuration)
-    - [Releases](#releases)
-  - [Install plugins](#2-install-plugins)
-    - [Install Packer](#install-packer)
-- [coc.nvim](#cocnvim)
-- [Bindings](#bindings)
-- [Maintainers](#maintainers)
+- [quick.nvim](#quicknvim)
+  - [What is this?](#what-is-this)
+  - [Plugins](#plugins)
+  - [Prerequisites](#prerequisites)
+  - [Setup quick.nvim](#setup-quicknvim)
+    - [1. Download configuration](#1-download-configuration)
+      - [Clone repository](#clone-repository)
+      - [Releases](#releases)
+    - [2. Install plugins](#2-install-plugins)
+      - [Install Packer](#install-packer)
+    - [Install ripgrep](#install-ripgrep)
+  - [coc.nvim](#cocnvim)
+  - [Bindings](#bindings)
+  - [Maintainers](#maintainers)
 
 ## What is this?
 
@@ -57,7 +60,7 @@ this repository into your `.config` directory, or wherever you keep your
 current Neovim configuration.
 
 ```sh
-git clone git@github.com:albingroen/quick.nvim.git ~/.config/nvim
+git clone git@github.com:tommytim0515/quick.nvim.git ~/.config/nvim
 ```
 
 #### Releases
