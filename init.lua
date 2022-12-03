@@ -20,7 +20,7 @@ require'nvim-treesitter.configs'.setup {
 
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
-  use 'neoclide/coc.nvim'
+  use { 'neoclide/coc.nvim', branch = 'release'}
   use 'kvrohit/rasmus.nvim'
   use 'nvim-treesitter/nvim-treesitter' 
   use 'tpope/vim-commentary'
@@ -30,7 +30,6 @@ return require('packer').startup(function()
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-  use { "nvim-telescope/telescope-file-browser.nvim" }
   use {
     "ur4ltz/surround.nvim",
     config = function()
