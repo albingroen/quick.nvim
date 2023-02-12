@@ -19,26 +19,24 @@ A very fast Lua based Neovim configuration that uses coc.nvim for intellisense
 ## What is this?
 
 This is a configuration for Neovim. It's written in Lua, and uses modern
-plugins like Treesitter, Telescope, and Lualine. It does however not implement
+plugins like Treesitter & Telescope. It does however not implement
 the native Neovim LSP. It's very fast, good looking, and has a lot of nice
 features.
 
-<img width="1280" alt="quick nvim" src="https://user-images.githubusercontent.com/19674362/139526562-a3a9f9f8-ada7-40d6-a2a8-2c534a97e0a5.png">
+<img width="1280" alt="quick nvim" src="https://user-images.githubusercontent.com/19674362/218315573-d6ee5f66-653d-4501-a463-36bf431a0378.png">
 
 https://user-images.githubusercontent.com/19674362/139526856-bdd9023d-8780-4b0f-aa4b-4edb619e35fd.mp4
 
 ## Plugins
 
-- [Lualine](https://github.com/nvim-lualine/lualine.nvim)
 - [Packer](https://github.com/wbthomason/packer.nvim)
 - [Plenary](https://github.com/nvim-lua/plenary.nvim)
-- [Surround](https://github.com/blackCauldron7/surround.nvim)
+- [Surround](https://github.com/url4ltz/surround.nvim)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
-- [Tokyo Night](https://github.com/folke/tokyonight.nvim)
+- [rsms.nvim](https://github.com/kvrohit/rasmus.nvim)
 - [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [coc](https://github.com/neoclide/coc.nvim)
 - [nvim-ts-context-commentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring)
-- [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons)
 - [vim-commentary](https://github.com/tpope/vim-commentary/)
 
 ## Prerequisites
