@@ -39,7 +39,6 @@ This is a configuration for Neovim. It's written in Lua, and uses modern plugins
 - [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- [rasmus.nvim](https://github.com/kvrohit/rasmus.nvim)
 - [conform.nvim](https://github.com/stevearc/conform.nvim)
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
