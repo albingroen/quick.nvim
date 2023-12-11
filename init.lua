@@ -1,39 +1,39 @@
 -- Basic settings
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-vim.o.cursorline = true
-vim.o.ignorecase = true
-vim.o.incsearch = true
-vim.o.mouse = "a"
-vim.o.number = true
-vim.o.relativenumber = true
-vim.o.hlsearch = false
-vim.o.showmode = false
-vim.o.swapfile = false
-vim.o.splitright = true
-vim.o.splitbelow = true
-vim.o.termguicolors = true
-vim.o.signcolumn = "yes"
-vim.o.hidden = true
-vim.o.backup = false
-vim.o.writebackup = false
-vim.o.swapfile = false
+vim.opt.cursorline = true
+vim.opt.ignorecase = true
+vim.opt.incsearch = true
+vim.opt.mouse = "a"
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.hlsearch = false
+vim.opt.showmode = false
+vim.opt.swapfile = false
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+vim.opt.termguicolors = true
+vim.opt.signcolumn = "yes"
+vim.opt.hidden = true
+vim.opt.backup = false
+vim.opt.writebackup = false
+vim.opt.swapfile = false
 vim.opt.list = true
-vim.o.laststatus = 3
-vim.o.pumheight = 10
+vim.opt.laststatus = 3
+vim.opt.pumheight = 10
 
 -- Basic mappings
-vim.keymap.set("n", "<C-H>", "<C-W><C-H>", { noremap = true })
-vim.keymap.set("n", "<C-J>", "<C-W><C-J>", { noremap = true })
-vim.keymap.set("n", "<C-K>", "<C-W><C-K>", { noremap = true })
-vim.keymap.set("n", "<C-L>", "<C-W><C-L>", { noremap = true })
-vim.keymap.set("n", "<C-S>", ":%s/", { noremap = true })
-vim.keymap.set("n", "sp", ":sp<CR>", { noremap = true })
-vim.keymap.set("n", "tj", ":tabprev<CR>", { noremap = true })
-vim.keymap.set("n", "tk", ":tabnext<CR>", { noremap = true })
-vim.keymap.set("n", "tn", ":tabnew<CR>", { noremap = true })
-vim.keymap.set("n", "to", ":tabo<CR>", { noremap = true })
-vim.keymap.set("n", "vs", ":vs<CR>", { noremap = true })
+vim.keymap.set("n", "<C-H>", "<C-W><C-H>")
+vim.keymap.set("n", "<C-J>", "<C-W><C-J>")
+vim.keymap.set("n", "<C-K>", "<C-W><C-K>")
+vim.keymap.set("n", "<C-L>", "<C-W><C-L>")
+vim.keymap.set("n", "<C-S>", ":%s/")
+vim.keymap.set("n", "sp", ":sp<CR>")
+vim.keymap.set("n", "tj", ":tabprev<CR>")
+vim.keymap.set("n", "tk", ":tabnext<CR>")
+vim.keymap.set("n", "tn", ":tabnew<CR>")
+vim.keymap.set("n", "to", ":tabo<CR>")
+vim.keymap.set("n", "vs", ":vs<CR>")
 vim.keymap.set("n", "<leader>j", ":cnext<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>k", ":cprevious<CR>", { noremap = true, silent = true })
 
