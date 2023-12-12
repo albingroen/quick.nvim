@@ -163,6 +163,8 @@ require("lazy").setup({
 				typescriptreact = { "prettierd" },
 				javascript = { "prettierd" },
 				typescript = { "prettierd" },
+				graphql = { "prettierd" },
+				json = { "prettierd" },
 				lua = { "stylua" },
 			},
 			format_on_save = {},
