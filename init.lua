@@ -1,6 +1,7 @@
 -- Basic settings
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+vim.wo.wrap = false
 vim.opt.cursorline = true
 vim.opt.ignorecase = true
 vim.opt.incsearch = true
@@ -21,6 +22,8 @@ vim.opt.swapfile = false
 vim.opt.list = true
 vim.opt.laststatus = 3
 vim.opt.pumheight = 10
+vim.opt.scrolloff = 3
+vim.opt.sidescrolloff = 3
 
 -- Basic mappings
 vim.keymap.set("n", "<C-H>", "<C-W><C-H>")
