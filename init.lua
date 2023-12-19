@@ -134,6 +134,7 @@ require("lazy").setup({
 		priority = 1000,
 		lazy = false,
 		config = function()
+			vim.g.rasmus_italic_comments = false
 			vim.cmd([[colorscheme rasmus]])
 		end,
 	},
@@ -168,6 +169,7 @@ require("lazy").setup({
 				typescript = { "prettierd" },
 				graphql = { "prettierd" },
 				json = { "prettierd" },
+				css = { "prettierd" },
 				lua = { "stylua" },
 			},
 			format_on_save = {},
