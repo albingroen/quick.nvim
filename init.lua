@@ -103,9 +103,11 @@ require("lazy").setup({
 		"nvim-telescope/telescope.nvim",
 		event = "VeryLazy",
 		keys = {
-			{ "<C-w>", "<cmd>Telescope grep_string<cr>", desc = "Grep string" },
-			{ "<C-p>", "<cmd>Telescope find_files<cr>", desc = "Find files" },
-			{ "<C-f>", "<cmd>Telescope live_grep<cr>", desc = "Live grep" },
+			{ "<leader>w", "<cmd>Telescope grep_string<cr>", desc = "Grep string" },
+			{ "<leader>b", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
+			{ "<leader>f", "<cmd>Telescope find_files<cr>", desc = "Find files" },
+			{ "<leader>s", "<cmd>Telescope live_grep<cr>", desc = "Live grep" },
+			{ "<leader>r", "<cmd>Telescope resume<cr>", desc = "Resume search" },
 		},
 		dependencies = {
 			"nvim-lua/plenary.nvim",
@@ -151,16 +153,6 @@ require("lazy").setup({
 		"stevearc/conform.nvim",
 		event = { "BufWritePre" },
 		cmd = { "ConformInfo" },
-		keys = {
-			{
-				"<leader>f",
-				function()
-					require("conform").format({ async = true, lsp_fallback = true })
-				end,
-				mode = "",
-				desc = "Format buffer",
-			},
-		},
 		opts = {
 			formatters_by_ft = {
 				javascriptreact = { "prettierd" },
