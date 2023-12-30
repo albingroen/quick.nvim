@@ -132,12 +132,11 @@ require("lazy").setup({
 
 	-- Colorscheme
 	{
-		"kvrohit/rasmus.nvim",
+		"RRethy/nvim-base16",
 		priority = 1000,
 		lazy = false,
 		config = function()
-			vim.g.rasmus_italic_comments = false
-			vim.cmd([[colorscheme rasmus]])
+			vim.cmd([[colorscheme base16-tomorrow-night]])
 		end,
 	},
 
