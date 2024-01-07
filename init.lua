@@ -102,12 +102,28 @@ require("lazy").setup({
 	{
 		"nvim-telescope/telescope.nvim",
 		event = "VeryLazy",
+		opts = {
+			pickers = {
+				git_commits = { previewer = false, theme = "ivy" },
+				grep_string = { previewer = false, theme = "ivy" },
+				find_files = { previewer = false, theme = "ivy" },
+				buffers = { previewer = false, theme = "ivy" },
+				resume = { previewer = false, theme = "ivy" },
+				live_grep = { theme = "ivy" },
+			},
+			defaults = {
+				layout_config = {
+					prompt_position = "bottom",
+				},
+			},
+		},
 		keys = {
 			{ "<leader>w", "<cmd>Telescope grep_string<cr>", desc = "Grep string" },
-			{ "<leader>b", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
+			{ "<leader>g", "<cmd>Telescope git_commits<cr>", desc = "Git commits" },
 			{ "<leader>f", "<cmd>Telescope find_files<cr>", desc = "Find files" },
-			{ "<leader>s", "<cmd>Telescope live_grep<cr>", desc = "Live grep" },
 			{ "<leader>r", "<cmd>Telescope resume<cr>", desc = "Resume search" },
+			{ "<leader>s", "<cmd>Telescope live_grep<cr>", desc = "Live grep" },
+			{ "<leader>b", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
 		},
 		dependencies = {
 			"nvim-lua/plenary.nvim",
