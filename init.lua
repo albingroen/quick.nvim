@@ -61,10 +61,6 @@ require("lazy").setup({
 	-- Automatic indentation
 	"tpope/vim-sleuth",
 
-	-- Git & GitHub plugins
-	"tpope/vim-rhubarb",
-	"tpope/vim-fugitive",
-
 	-- Better navigation between Neovim and Kitty
 	"knubie/vim-kitty-navigator",
 
@@ -125,9 +121,7 @@ require("lazy").setup({
 			{ "<leader>s", "<cmd>Telescope live_grep<cr>", desc = "Live grep" },
 			{ "<leader>b", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
 		},
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-		},
+		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 
 	-- Better syntax highlighting & much more

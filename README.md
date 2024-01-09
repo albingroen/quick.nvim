@@ -20,8 +20,6 @@ This is a configuration for Neovim. It's written in Lua, and uses modern plugins
 ## Plugins
 
 - [vim-sleuth](https://github.com/tpope/vim-sleuth)
-- [vim-rhubarb](https://github.com/tpope/vim-rhubarb)
-- [vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [vim-kitty-navigator](https://github.com/knubie/vim-kitty-navigator)
 - [nvim-bqf](https://github.com/kevinhwang91/nvim-bqf)
