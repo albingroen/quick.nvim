@@ -30,6 +30,7 @@ This is a configuration for Neovim. It's written in Lua, and uses modern plugins
 - [mason.nvim](https://github.com/williamboman/mason.nvim)
 - [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+- [lspkind](https://github.com/onsails/lspkind.nvim)
 - [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
 - [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
 - [rasmus.nvim](https://github.com/kvrohit/rasmus.nvim)

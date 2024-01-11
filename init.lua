@@ -70,6 +70,8 @@ require("lazy").setup({
 	-- Autoclose HTML-style tags
 	"windwp/nvim-ts-autotag",
 
+	"onsails/lspkind.nvim",
+
 	-- Easy commenting in normal & visual mode
 	{ "numToStr/Comment.nvim", lazy = false },
 	{ "JoosepAlviste/nvim-ts-context-commentstring", event = "VeryLazy" },
@@ -117,7 +119,7 @@ require("lazy").setup({
 			{ "<leader>w", "<cmd>Telescope grep_string<cr>", desc = "Grep string" },
 			{ "<leader>g", "<cmd>Telescope git_commits<cr>", desc = "Git commits" },
 			{ "<leader>f", "<cmd>Telescope find_files<cr>", desc = "Find files" },
-			{ "<leader>r", "<cmd>Telescope resume<cr>", desc = "Resume search" },
+			{ "<leader>c", "<cmd>Telescope resume<cr>", desc = "Resume search" },
 			{ "<leader>s", "<cmd>Telescope live_grep<cr>", desc = "Live grep" },
 			{ "<leader>b", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
 		},
@@ -342,6 +344,24 @@ cmp.setup({
 		{ name = "nvim_lsp" },
 		{ name = "luasnip" },
 		{ name = "buffer" },
+	},
+	window = {
+		completion = {
+			winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
+			col_offset = -3,
+			side_padding = 0,
+		},
+	},
+	formatting = {
+		fields = { "kind", "abbr", "menu" },
+		format = function(entry, vim_item)
+			local kind = require("lspkind").cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry, vim_item)
+			local strings = vim.split(kind.kind, "%s", { trimempty = true })
+			kind.kind = " " .. (strings[1] or "") .. " "
+			kind.menu = "    (" .. (strings[2] or "") .. ")"
+
+			return kind
+		end,
 	},
 })
 
