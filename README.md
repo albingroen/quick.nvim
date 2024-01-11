@@ -80,6 +80,10 @@ nvim ~/.config/nvim/init.lua
 
 In order for the Telescope live_grep functionality to work, you need to have ripgrep installed on your machine. Please reference the official ripgrep installation options, but if run Homebrew, you can install it like this.
 
+```
+brew install rg
+```
+
 ### Install LSP servers, formatters and linters
 
 You can install anything you want by running `:Mason`. Here are a few that I usually install.
@@ -88,10 +92,6 @@ You can install anything you want by running `:Mason`. Here are a few that I usu
 - eslint-lsp eslint
 - stylua
 - typescript-language-server tsserver
-
-```
-brew install rg
-```
 
 ## Maintainers
 
