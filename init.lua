@@ -104,6 +104,7 @@ require("lazy").setup({
 			pickers = {
 				git_commits = { previewer = false, theme = "ivy" },
 				grep_string = { previewer = false, theme = "ivy" },
+				diagnostics = { previewer = false, theme = "ivy" },
 				find_files = { previewer = false, theme = "ivy" },
 				buffers = { previewer = false, theme = "ivy" },
 				current_buffer_fuzzy_find = { theme = "ivy" },
@@ -118,6 +119,7 @@ require("lazy").setup({
 		},
 		keys = {
 			{ "<leader>z", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "File fuzzy find" },
+			{ "<leader>d", "<cmd>Telescope diagnostics<cr>", desc = "Show diagnostics" },
 			{ "<leader>w", "<cmd>Telescope grep_string<cr>", desc = "Grep string" },
 			{ "<leader>g", "<cmd>Telescope git_commits<cr>", desc = "Git commits" },
 			{ "<leader>f", "<cmd>Telescope find_files<cr>", desc = "Find files" },
