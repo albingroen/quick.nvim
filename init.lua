@@ -39,6 +39,7 @@ vim.keymap.set("n", "to", ":tabo<CR>")
 vim.keymap.set("n", "vs", ":vs<CR>")
 vim.keymap.set("n", "<leader>j", ":cnext<CR>", { silent = true })
 vim.keymap.set("n", "<leader>k", ":cprevious<CR>", { silent = true })
+vim.keymap.set("n", "<leader>o", ":only<CR>", { silent = true })
 
 -- Setup lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
