@@ -24,6 +24,19 @@ vim.opt.pumheight = 10
 vim.opt.scrolloff = 3
 vim.opt.sidescrolloff = 3
 
+-- Helpers
+local function change_colorscheme()
+	local m = vim.fn.system("defaults read -g AppleInterfaceStyle")
+	m = m:gsub("%s+", "") -- trim whitespace
+	if m == "Dark" then
+		vim.o.background = "dark"
+		vim.cmd("colorscheme github_dark_colorblind")
+	else
+		vim.o.background = "light"
+		vim.cmd("colorscheme github_light_colorblind")
+	end
+end
+
 -- Basic mappings
 vim.keymap.set("n", "<C-H>", "<C-W><C-H>")
 vim.keymap.set("n", "<C-J>", "<C-W><C-J>")
@@ -64,17 +77,29 @@ require("lazy").setup({
 	-- Better navigation between Neovim and Kitty
 	"knubie/vim-kitty-navigator",
 
-	-- Better quickfix lists
-	"kevinhwang91/nvim-bqf",
-
 	-- Autoclose HTML-style tags
 	"windwp/nvim-ts-autotag",
-
-	"onsails/lspkind.nvim",
 
 	-- Easy commenting in normal & visual mode
 	{ "numToStr/Comment.nvim", lazy = false },
 	{ "JoosepAlviste/nvim-ts-context-commentstring", event = "VeryLazy" },
+
+	-- File explorer
+	{
+		"stevearc/oil.nvim",
+		lazy = false,
+		config = function()
+			require("oil").setup({
+				view_options = {
+					show_hidden = true,
+				},
+				default_file_explorer = true,
+			})
+		end,
+		keys = {
+			{ "-", "<cmd>Oil<cr>", desc = "Open parent directory" },
+		},
+	},
 
 	-- LSP
 	{
@@ -148,11 +173,11 @@ require("lazy").setup({
 
 	-- Colorscheme
 	{
-		"kvrohit/rasmus.nvim",
-		priority = 1000,
+		"projekt0n/github-nvim-theme",
 		lazy = false,
+		priority = 1000,
 		config = function()
-			vim.cmd([[colorscheme rasmus]])
+			change_colorscheme()
 		end,
 	},
 
@@ -357,14 +382,9 @@ cmp.setup({
 		},
 	},
 	formatting = {
-		fields = { "kind", "abbr", "menu" },
-		format = function(entry, vim_item)
-			local kind = require("lspkind").cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry, vim_item)
-			local strings = vim.split(kind.kind, "%s", { trimempty = true })
-			kind.kind = " " .. (strings[1] or "") .. " "
-			kind.menu = "    (" .. (strings[2] or "") .. ")"
-
-			return kind
+		format = function(_, vim_item)
+			vim_item.abbr = string.sub(vim_item.abbr, 1, 20)
+			return vim_item
 		end,
 	},
 })
