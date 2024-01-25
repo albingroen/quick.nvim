@@ -375,11 +375,8 @@ cmp.setup({
 		{ name = "buffer" },
 	},
 	window = {
-		completion = {
-			winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
-			col_offset = -3,
-			side_padding = 0,
-		},
+		completion = cmp.config.window.bordered(),
+		documentation = cmp.config.window.bordered(),
 	},
 	formatting = {
 		format = function(_, vim_item)
@@ -390,3 +387,7 @@ cmp.setup({
 })
 
 cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
+
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+	border = "rounded",
+})
