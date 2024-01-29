@@ -84,6 +84,12 @@ require("lazy").setup({
 	{ "numToStr/Comment.nvim", lazy = false },
 	{ "JoosepAlviste/nvim-ts-context-commentstring", event = "VeryLazy" },
 
+	-- Code assistant
+	{
+		"robitx/gp.nvim",
+		opts = {},
+	},
+
 	-- File explorer
 	{
 		"stevearc/oil.nvim",
@@ -191,8 +197,6 @@ require("lazy").setup({
 	-- For formatting code
 	{
 		"stevearc/conform.nvim",
-		event = { "BufWritePre" },
-		cmd = { "ConformInfo" },
 		opts = {
 			formatters_by_ft = {
 				javascriptreact = { "prettierd" },
@@ -206,9 +210,6 @@ require("lazy").setup({
 			},
 			format_on_save = {},
 		},
-		init = function()
-			vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
-		end,
 	},
 
 	-- Pair matching characters
