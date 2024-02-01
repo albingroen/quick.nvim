@@ -1,6 +1,7 @@
 # quick.nvim
 
-A very fast Lua based Neovim configuration that uses native LSP for intellisense
+A very fast Lua based Neovim configuration that uses native LSP for
+intellisense
 
 - [What is this?](#what-is-this)
 - [Plugins](#plugins)
@@ -13,7 +14,9 @@ A very fast Lua based Neovim configuration that uses native LSP for intellisense
 
 ## What is this?
 
-This is a configuration for Neovim. It's written in Lua, and uses modern plugins like Treesitter & Telescope. It also implements the native Neovim LSP. It's very fast, good looking, and has a lot of nice features.
+This is a configuration for Neovim. It's written in Lua, and uses modern
+plugins like Treesitter & Telescope. It also implements the native Neovim LSP.
+It's very fast, good looking, and has a lot of nice features.
 
 ![quick-nvim-min](https://github.com/albingroen/quick.nvim/assets/19674362/3721f3a0-7198-4e23-9d76-a907dadb91ff)
 
@@ -32,6 +35,8 @@ This is a configuration for Neovim. It's written in Lua, and uses modern plugins
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 - [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
 - [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
+- [Lualine](https://github.com/nvim-lualine/lualine.nvim)
+- [gp.nvim](https://github.com/Robitx/gp.nvim?tab=readme-ov-file#4-configuration)
 - [github-nvim-theme.nvim](https://github.com/projekt0n/github-nvim-theme)
 - [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
 - [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
@@ -43,7 +48,13 @@ This is a configuration for Neovim. It's written in Lua, and uses modern plugins
 
 ## Prerequisites
 
+
 - [Neovim 0.9 or above](https://neovim.io)
+
+### Recommended terminal setup
+
+[Kitty](https://sw.kovidgoyal.net/kitty/conf/) with the [following
+configuration](https://github.com/albingroen/dotfiles/tree/main/kitty)
 
 ## Setup quick.nvim
 
@@ -51,15 +62,17 @@ This is a configuration for Neovim. It's written in Lua, and uses modern plugins
 
 #### Clone repository
 
-If you want to receive updates as this configuration gets patched, then clone this repository into your `.config` directory, or wherever you keep your current Neovim configuration.
+If you want to receive updates as this configuration gets patched, then clone
+this repository into your `.config` directory, or wherever you keep your
+current Neovim configuration.
 
-```sh
-git clone git@github.com:albingroen/quick.nvim.git ~/.config/nvim
-```
+```sh git clone git@github.com:albingroen/quick.nvim.git ~/.config/nvim ```
 
 #### Releases
 
-On the other hand, if you want a raw folder with the configuration files, without git connected to it, you can head over to the releases page, and download a release from there.
+On the other hand, if you want a raw folder with the configuration files,
+without git connected to it, you can head over to the releases page, and
+download a release from there.
 
 https://github.com/albingroen/quick.nvim/releases
 
@@ -67,25 +80,22 @@ https://github.com/albingroen/quick.nvim/releases
 
 To install the plugins used by quick.nvim, you need to do so using Lazy.
 
-```
-nvim ~/.config/nvim/init.lua
-```
+``` nvim ~/.config/nvim/init.lua ```
 
-```
-:Lazy sync
-```
+``` :Lazy sync ```
 
 ### Install ripgrep
 
-In order for the Telescope live_grep functionality to work, you need to have ripgrep installed on your machine. Please reference the official ripgrep installation options, but if run Homebrew, you can install it like this.
+In order for the Telescope live_grep functionality to work, you need to have
+ripgrep installed on your machine. Please reference the official ripgrep
+installation options, but if run Homebrew, you can install it like this.
 
-```
-brew install rg
-```
+``` brew install rg ```
 
 ### Install LSP servers, formatters and linters
 
-You can install anything you want by running `:Mason`. Here are a few that I usually install.
+You can install anything you want by running `:Mason`. Here are a few that I
+usually install.
 
 - emmet-language-server emmet_language_server
 - eslint-lsp eslint
@@ -94,6 +104,6 @@ You can install anything you want by running `:Mason`. Here are a few that I usu
 
 ## Maintainers
 
-<a href="https://github.com/albingroen"> 
-  <img src="https://avatars.githubusercontent.com/u/19674362?v=4" width="80" height="80" />
-</a>
+<a href="https://github.com/albingroen"> <img
+  src="https://avatars.githubusercontent.com/u/19674362?v=4" width="80"
+  height="80" /> </a>
