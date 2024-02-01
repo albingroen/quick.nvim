@@ -9,7 +9,6 @@ vim.opt.mouse = "a"
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.hlsearch = false
-vim.opt.showmode = false
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.termguicolors = true
@@ -23,6 +22,7 @@ vim.opt.laststatus = 3
 vim.opt.pumheight = 10
 vim.opt.scrolloff = 3
 vim.opt.sidescrolloff = 3
+vim.opt.colorcolumn = "80"
 
 -- Helpers
 local function change_colorscheme()
@@ -51,7 +51,7 @@ vim.keymap.set("n", "to", ":tabo<CR>")
 vim.keymap.set("n", "vs", ":vs<CR>")
 vim.keymap.set("n", "<leader>j", ":cnext<CR>", { silent = true })
 vim.keymap.set("n", "<leader>k", ":cprevious<CR>", { silent = true })
-vim.keymap.set("n", "<leader>o", ":only<CR>", { silent = true })
+vim.keymap.set("n", "<leader>o", ":tabonly<cr>:only<CR>", { silent = true })
 
 -- Setup lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -124,6 +124,7 @@ require("lazy").setup({
 			"saadparwaiz1/cmp_luasnip",
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-path",
 		},
 	},
 
@@ -133,6 +134,7 @@ require("lazy").setup({
 		event = "VeryLazy",
 		opts = {
 			pickers = {
+				git_branches = { previewer = false, theme = "ivy", show_remote_tracking_branches = false },
 				git_commits = { previewer = false, theme = "ivy" },
 				grep_string = { previewer = false, theme = "ivy" },
 				diagnostics = { previewer = false, theme = "ivy" },
@@ -151,8 +153,9 @@ require("lazy").setup({
 		keys = {
 			{ "<leader>z", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "File fuzzy find" },
 			{ "<leader>d", "<cmd>Telescope diagnostics<cr>", desc = "Show diagnostics" },
+			{ "<leader>gb", "<cmd>Telescope git_branches<cr>", desc = "Git branches" },
+			{ "<leader>gc", "<cmd>Telescope git_commits<cr>", desc = "Git commits" },
 			{ "<leader>w", "<cmd>Telescope grep_string<cr>", desc = "Grep string" },
-			{ "<leader>g", "<cmd>Telescope git_commits<cr>", desc = "Git commits" },
 			{ "<leader>f", "<cmd>Telescope find_files<cr>", desc = "Find files" },
 			{ "<leader>c", "<cmd>Telescope resume<cr>", desc = "Resume search" },
 			{ "<leader>s", "<cmd>Telescope live_grep<cr>", desc = "Live grep" },
@@ -185,6 +188,25 @@ require("lazy").setup({
 		config = function()
 			change_colorscheme()
 		end,
+	},
+
+	-- Statusline
+	{
+		"nvim-lualine/lualine.nvim",
+		opts = {
+			options = {
+				section_separators = { left = "", right = "" },
+				component_separators = { left = "", right = "" },
+			},
+			sections = {
+				lualine_a = {},
+				lualine_b = {},
+				lualine_c = { "branch", "diff", { "filename", path = 1 } },
+				lualine_x = {},
+				lualine_y = {},
+				lualine_z = {},
+			},
+		},
 	},
 
 	-- Surround words with characters in normal mode
@@ -371,9 +393,10 @@ cmp.setup({
 		end, { "i", "s" }),
 	}),
 	sources = {
-		{ name = "nvim_lsp" },
-		{ name = "luasnip" },
-		{ name = "buffer" },
+		{ name = "nvim_lsp", max_item_count = 5 },
+		{ name = "buffer", max_item_count = 5 },
+		{ name = "path", max_item_count = 3 },
+		{ name = "luasnip", max_item_count = 3 },
 	},
 	window = {
 		completion = cmp.config.window.bordered(),
