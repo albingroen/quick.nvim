@@ -190,25 +190,6 @@ require("lazy").setup({
 		end,
 	},
 
-	-- Statusline
-	{
-		"nvim-lualine/lualine.nvim",
-		opts = {
-			options = {
-				section_separators = { left = "", right = "" },
-				component_separators = { left = "", right = "" },
-			},
-			sections = {
-				lualine_a = {},
-				lualine_b = {},
-				lualine_c = { "branch", "diff", { "filename", path = 1 } },
-				lualine_x = {},
-				lualine_y = {},
-				lualine_z = {},
-			},
-		},
-	},
-
 	-- Surround words with characters in normal mode
 	{
 		"kylechui/nvim-surround",
