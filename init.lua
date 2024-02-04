@@ -22,7 +22,6 @@ vim.opt.laststatus = 3
 vim.opt.pumheight = 10
 vim.opt.scrolloff = 3
 vim.opt.sidescrolloff = 3
-vim.opt.colorcolumn = "80"
 
 -- Helpers
 local function change_colorscheme()
