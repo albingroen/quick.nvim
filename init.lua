@@ -29,10 +29,8 @@ local function change_colorscheme()
 	m = m:gsub("%s+", "") -- trim whitespace
 	if m == "Dark" then
 		vim.o.background = "dark"
-		vim.cmd("colorscheme github_dark_colorblind")
 	else
 		vim.o.background = "light"
-		vim.cmd("colorscheme github_light_colorblind")
 	end
 end
 
@@ -181,11 +179,15 @@ require("lazy").setup({
 
 	-- Colorscheme
 	{
-		"projekt0n/github-nvim-theme",
+		"mcchrish/zenbones.nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
 			change_colorscheme()
+
+			vim.g.zenbones_compat = true
+
+			vim.cmd("colorscheme zenbones")
 		end,
 	},
 
