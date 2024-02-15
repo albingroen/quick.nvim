@@ -18,8 +18,6 @@ This is a configuration for Neovim. It's written in Lua, and uses modern
 plugins like Treesitter & Telescope. It also implements the native Neovim LSP.
 It's very fast, good looking, and has a lot of nice features.
 
-![quick-nvim-min](https://github.com/albingroen/quick.nvim/assets/19674362/3721f3a0-7198-4e23-9d76-a907dadb91ff)
-
 ## Plugins
 
 - [Comment.nvim](https://github.com/numToStr/Comment.nvim)
@@ -65,7 +63,7 @@ If you want to receive updates as this configuration gets patched, then clone
 this repository into your `.config` directory, or wherever you keep your
 current Neovim configuration.
 
-```sh git clone git@github.com:albingroen/quick.nvim.git ~/.config/nvim ```
+    git clone https://github.com/albingroen/quick.nvim.git
 
 #### Releases
 
@@ -79,9 +77,9 @@ https://github.com/albingroen/quick.nvim/releases
 
 To install the plugins used by quick.nvim, you need to do so using Lazy.
 
-``` nvim ~/.config/nvim/init.lua ```
+    nvim ~/.config/nvim/init.lua
 
-``` :Lazy sync ```
+    :Lazy sync
 
 ### Install ripgrep
 
@@ -89,7 +87,7 @@ In order for the Telescope live_grep functionality to work, you need to have
 ripgrep installed on your machine. Please reference the official ripgrep
 installation options, but if run Homebrew, you can install it like this.
 
-``` brew install rg ```
+    brew install rg
 
 ### Install LSP servers, formatters and linters
 
