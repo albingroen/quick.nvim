@@ -71,8 +71,6 @@ require("lazy").setup({
 	-- Automatic indentation
 	"tpope/vim-sleuth",
 
-	-- Better navigation between Neovim and Kitty
-	"knubie/vim-kitty-navigator",
 
 	-- Autoclose HTML-style tags
 	"windwp/nvim-ts-autotag",
@@ -80,6 +78,21 @@ require("lazy").setup({
 	-- Easy commenting in normal & visual mode
 	{ "numToStr/Comment.nvim", lazy = false },
 	{ "JoosepAlviste/nvim-ts-context-commentstring", event = "VeryLazy" },
+
+	-- Better navigation between Neovim and Tmux
+	{
+		"alexghergh/nvim-tmux-navigation",
+		config = function()
+			require'nvim-tmux-navigation'.setup({
+				keybindings = {
+					left = "<C-h>",
+					down = "<C-j>",
+					up = "<C-k>",
+					right = "<C-l>",
+				}
+			})
+		end
+	},
 
 	-- Code assistant
 	{
