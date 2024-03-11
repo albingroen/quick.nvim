@@ -380,10 +380,6 @@ cmp.setup({
 		{ name = "path", max_item_count = 3 },
 		{ name = "luasnip", max_item_count = 3 },
 	},
-	window = {
-		completion = cmp.config.window.bordered(),
-		documentation = cmp.config.window.bordered(),
-	},
 	formatting = {
 		format = function(_, vim_item)
 			vim_item.abbr = string.sub(vim_item.abbr, 1, 20)
@@ -393,7 +389,3 @@ cmp.setup({
 })
 
 cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
-
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-	border = "rounded",
-})
