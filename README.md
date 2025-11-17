@@ -1,3 +1,5 @@
+<img width="996" height="662" alt="quick nvim min" src="https://github.com/user-attachments/assets/ad2ec55f-dd0a-4c0f-8086-4de7d1f5ba00" />
+
 # quick.nvim
 
 A very fast Lua based Neovim configuration that uses native LSP for
