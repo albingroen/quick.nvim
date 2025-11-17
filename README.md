@@ -3,7 +3,7 @@
 A very fast Lua based Neovim configuration that uses native LSP for
 intellisense.
 
-Lanch time: ~60ms
+Launch time: ~60ms
 
 - [What is this?](#what-is-this)
 - [Key Features](#key-features)
