@@ -181,3 +181,11 @@ Leader key is set to `Space`.
 <a href="https://github.com/albingroen"> <img
   src="https://avatars.githubusercontent.com/u/19674362?v=4" width="80"
   height="80" /> </a>
+
+## Contributors
+
+
+
+<a href="[https://github.com/albingroen](https://github.com/Signynt)"> <img
+  src="https://avatars.githubusercontent.com/u/67801159?v=4" width="60"
+  height="60" /> </a>
