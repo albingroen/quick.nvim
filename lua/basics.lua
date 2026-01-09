@@ -24,7 +24,7 @@ vim.opt.scrolloff = 3
 vim.opt.sidescrolloff = 3
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldenable = false
--- vim.opt.background = "dark"
+vim.opt.background = "dark"
 
 -- Basic mappings
 vim.keymap.set("n", "<C-S>", ":%s/")
@@ -37,10 +37,6 @@ vim.keymap.set("n", "vs", ":vs<CR>")
 vim.keymap.set("n", "<leader>j", ":cnext<CR>", { silent = true })
 vim.keymap.set("n", "<leader>k", ":cprevious<CR>", { silent = true })
 vim.keymap.set("n", "<leader>o", ":tabonly<cr>:only<CR>", { silent = true })
-vim.keymap.set("n", "<c-h>", "<c-w>h")
-vim.keymap.set("n", "<c-l>", "<c-w>l")
-vim.keymap.set("n", "<c-j>", "<c-w>j")
-vim.keymap.set("n", "<c-k>", "<c-w>k")
 
 -- Auto resize splits when the terminal's window is resized
 vim.api.nvim_create_autocmd({ "VimResized" }, {
