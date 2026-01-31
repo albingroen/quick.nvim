@@ -33,6 +33,7 @@ and focused on essential features for productive coding.
 - **Fuzzy Finding**: Telescope with Ivy theme for finding files, grepping, and more
 - **Smart Editing**: Auto-pairs, auto-tags, context-aware commenting, and surround operations
 - **File Navigation**: Oil.nvim for buffer-like file exploration
+- **Tmux Integration**: Seamless navigation between Neovim splits and tmux panes
 - **TypeScript Enhanced**: Dedicated TypeScript tools with auto-import support
 - **Minimal UI**: Clean interface with Which-key for discoverable keybindings
 
@@ -56,6 +57,7 @@ and focused on essential features for productive coding.
 - [typescript-tools.nvim](https://github.com/pmizio/typescript-tools.nvim) - Enhanced TypeScript support
 - [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim) - Render markdown in Neovim with LSP completions
 - [vim-rhubarb](https://github.com/tpope/vim-rhubarb) - GitHub integration for fugitive
+- [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) - Seamless navigation between tmux panes and Neovim splits
 - [vim-sleuth](https://github.com/tpope/vim-sleuth) - Auto-detect indentation
 - [which-key.nvim](https://github.com/folke/which-key.nvim) - Keybinding popup
 
@@ -130,7 +132,7 @@ Leader key is set to `Space`.
 ### General
 - `<Space>?` - Show buffer-local keymaps (which-key)
 - `<C-S>` - Start search and replace
-- `<C-h/j/k/l>` - Navigate between splits
+- `<C-h/j/k/l>` - Navigate between splits (also works across tmux panes)
 
 ### File Navigation
 - `-` - Open Oil file explorer (parent directory)
