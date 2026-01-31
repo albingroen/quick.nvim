@@ -56,6 +56,7 @@ and focused on essential features for productive coding.
 - [plenary.nvim](https://github.com/nvim-lua/plenary.nvim) - Lua utility library
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) - Fuzzy finder
 - [typescript-tools.nvim](https://github.com/pmizio/typescript-tools.nvim) - Enhanced TypeScript support
+- [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim) - Render markdown in Neovim with LSP completions
 - [vim-rhubarb](https://github.com/tpope/vim-rhubarb) - GitHub integration for fugitive
 - [vim-sleuth](https://github.com/tpope/vim-sleuth) - Auto-detect indentation
 - [which-key.nvim](https://github.com/folke/which-key.nvim) - Keybinding popup
