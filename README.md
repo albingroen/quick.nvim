@@ -1,3 +1,5 @@
+<img width="3828" height="2490" alt="CleanShot 2026-02-01 at 00 41 34" src="https://github.com/user-attachments/assets/53c58542-c6cd-4f78-8cdb-d7083c97bfae" />
+
 # quick.nvim
 
 A very fast Lua based Neovim configuration that uses native LSP for
