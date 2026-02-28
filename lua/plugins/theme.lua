@@ -1,7 +1,6 @@
 return {
-	"navarasu/onedark.nvim",
-	priority = 1000, -- make sure to load this before all the other start plugins
+	"projekt0n/github-nvim-theme",
 	config = function()
-		require("onedark").load()
+		vim.cmd("colorscheme github_dark_colorblind")
 	end,
 }

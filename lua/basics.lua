@@ -37,6 +37,10 @@ vim.keymap.set("n", "vs", ":vs<CR>")
 vim.keymap.set("n", "<leader>j", ":cnext<CR>", { silent = true })
 vim.keymap.set("n", "<leader>k", ":cprevious<CR>", { silent = true })
 vim.keymap.set("n", "<leader>o", ":tabonly<cr>:only<CR>", { silent = true })
+vim.keymap.set("n", "<c-l>", "<c-w>l")
+vim.keymap.set("n", "<c-h>", "<c-w>h")
+vim.keymap.set("n", "<c-k>", "<c-w>k")
+vim.keymap.set("n", "<c-j>", "<c-w>j")
 
 -- Auto resize splits when the terminal's window is resized
 vim.api.nvim_create_autocmd({ "VimResized" }, {
