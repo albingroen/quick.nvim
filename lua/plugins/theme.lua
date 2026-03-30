@@ -1,6 +1,11 @@
 return {
-	"projekt0n/github-nvim-theme",
+	"rose-pine/neovim",
+	name = "rose-pine",
 	config = function()
-		vim.cmd("colorscheme github_dark_colorblind")
+		require("rose-pine").setup({
+			variant = "moon",
+		})
+
+		vim.cmd.colorscheme("rose-pine")
 	end,
 }
