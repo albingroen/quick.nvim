@@ -40,6 +40,7 @@ and focused on essential features for productive coding.
 ## Plugins
 
 - [blink.cmp](https://github.com/saghen/blink.cmp) - Fast completion plugin with LSP support
+- [blink.lib](https://github.com/saghen/blink.lib) - Shared library for blink plugins
 - [conform.nvim](https://github.com/stevearc/conform.nvim) - Formatter plugin
 - [friendly-snippets](https://github.com/rafamadriz/friendly-snippets) - Snippet collection
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) - Git decorations
@@ -50,20 +51,19 @@ and focused on essential features for productive coding.
 - [nvim-surround](https://github.com/kylechui/nvim-surround) - Manipulate surrounding characters
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) - Syntax highlighting and parsing
 - [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag) - Auto-close HTML/JSX tags
-- [nvim-ts-context-commentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring) - Context-aware commenting
 - [oil.nvim](https://github.com/stevearc/oil.nvim) - File explorer
+- [outline.nvim](https://github.com/hedyhli/outline.nvim) - Symbol outline sidebar
 - [plenary.nvim](https://github.com/nvim-lua/plenary.nvim) - Lua utility library
-- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) - Fuzzy finder
-- [typescript-tools.nvim](https://github.com/pmizio/typescript-tools.nvim) - Enhanced TypeScript support
 - [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim) - Render markdown in Neovim with LSP completions
-- [vim-rhubarb](https://github.com/tpope/vim-rhubarb) - GitHub integration for fugitive
-- [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) - Seamless navigation between tmux panes and Neovim splits
+- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) - Fuzzy finder
+- [ts-comments.nvim](https://github.com/folke/ts-comments.nvim) - Context-aware commenting for Neovim's built-in commenting
+- [typescript-tools.nvim](https://github.com/pmizio/typescript-tools.nvim) - Enhanced TypeScript support
 - [vim-sleuth](https://github.com/tpope/vim-sleuth) - Auto-detect indentation
-- [which-key.nvim](https://github.com/folke/which-key.nvim) - Keybinding popup
+- [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) - Seamless navigation between tmux panes and Neovim splits
 
 ## Prerequisites
 
-- [Neovim 0.9 or above](https://neovim.io)
+- [Neovim 0.12 or above](https://neovim.io) (uses the built-in `vim.pack` plugin manager)
 - [Git](https://git-scm.com/) for version control features
 - [ripgrep](https://github.com/BurntSushi/ripgrep) for Telescope live grep
 - [Node.js](https://nodejs.org/) for many LSP servers and formatters
@@ -95,11 +95,12 @@ https://github.com/albingroen/quick.nvim/releases
 
 ### 2. Install plugins
 
-To install the plugins used by quick.nvim, you need to do so using Lazy.
+Plugins are managed by Neovim's built-in `vim.pack`. They are downloaded and
+installed automatically the first time you launch Neovim with this configuration:
 
     nvim ~/.config/nvim/init.lua
 
-    :Lazy sync
+To update plugins later, run `:lua vim.pack.update()`.
 
 ### 3. Install LSP servers, formatters and linters
 
@@ -130,9 +131,9 @@ typescript-language-server separately.
 Leader key is set to `Space`.
 
 ### General
-- `<Space>?` - Show buffer-local keymaps (which-key)
 - `<C-S>` - Start search and replace
 - `<C-h/j/k/l>` - Navigate between splits (also works across tmux panes)
+- `<Space>l` - Toggle symbol outline
 
 ### File Navigation
 - `-` - Open Oil file explorer (parent directory)

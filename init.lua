@@ -4,10 +4,10 @@ require("basics")
 vim.pack.add({
 	"https://github.com/nvim-lua/plenary.nvim",
 	"https://github.com/tpope/vim-sleuth",
-	"https://github.com/nvim-lua/plenary.nvim",
 	"https://github.com/nvim-telescope/telescope.nvim",
 	"https://github.com/stevearc/oil.nvim",
-	{ src = "https://github.com/rose-pine/neovim", name = "rose-pine" },
+	-- { src = "https://github.com/rose-pine/neovim", name = "rose-pine" },
+	"https://github.com/tinted-theming/tinted-nvim",
 	"https://github.com/kylechui/nvim-surround",
 	"https://github.com/christoomey/vim-tmux-navigator",
 	"https://github.com/nvim-treesitter/nvim-treesitter",
@@ -20,9 +20,17 @@ vim.pack.add({
 	"https://github.com/williamboman/mason.nvim",
 	"https://github.com/williamboman/mason-lspconfig.nvim",
 	"https://github.com/pmizio/typescript-tools.nvim",
+	"https://github.com/saghen/blink.lib",
 	"https://github.com/saghen/blink.cmp",
 	"https://github.com/rafamadriz/friendly-snippets",
-	"https://github.com/JoosepAlviste/nvim-ts-context-commentstring",
+	"https://github.com/folke/ts-comments.nvim",
+	"https://github.com/hedyhli/outline.nvim",
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+	callback = function(ev)
+		pcall(vim.treesitter.start, ev.buf)
+	end,
 })
 
 -- Telescope
@@ -66,11 +74,38 @@ require("oil").setup({
 vim.keymap.set("n", "-", "<cmd>Oil<cr>", { desc = "Buffers" })
 
 -- Theme
-require("rose-pine").setup({
-	variant = "moon",
-})
+-- require("rose-pine").setup({
+-- 	variant = "moon",
+-- })
+--
+-- vim.cmd.colorscheme("rose-pine")
 
-vim.cmd.colorscheme("rose-pine")
+local theme_script_path = vim.fn.expand("~/.local/share/tinted-theming/tinty/base16-vim-colors-file.vim")
+
+local function file_exists(file_path)
+	return vim.fn.filereadable(file_path) == 1 and true or false
+end
+
+local function handle_focus_gained()
+	if file_exists(theme_script_path) then
+		vim.cmd("source " .. theme_script_path)
+	end
+end
+
+if file_exists(theme_script_path) then
+	vim.o.termguicolors = true
+	vim.g.tinted_colorspace = 256
+
+	vim.cmd("source " .. theme_script_path)
+
+	vim.api.nvim_create_autocmd("FocusGained", {
+		callback = handle_focus_gained,
+	})
+end
+
+-- require("tinted-nvim").setup({
+-- 	default_scheme = "base16-ayu-dark",
+-- })
 
 -- Nvim Tmux Navigator
 vim.keymap.set("n", "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>")
@@ -81,6 +116,43 @@ vim.keymap.set("n", "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>")
 -- Render Markdown
 require("render-markdown").setup({
 	completions = { lsp = { enabled = true } },
+})
+
+-- Treesitter & blink.cmp build hooks
+vim.api.nvim_create_autocmd("PackChanged", {
+	callback = function(ev)
+		local name, kind = ev.data.spec.name, ev.data.kind
+		if name == "nvim-treesitter" and kind == "update" then
+			if not ev.data.active then
+				vim.cmd.packadd("nvim-treesitter")
+			end
+			require("nvim-treesitter").install({
+				"lua",
+				"vim",
+				"vimdoc",
+				"query",
+				"markdown",
+				"markdown_inline",
+				"javascript",
+				"typescript",
+				"tsx",
+				"html",
+				"css",
+				"json",
+				"jsonc",
+				"svelte",
+				"python",
+				"bash",
+				"fish",
+				"yaml",
+				"toml",
+				"go",
+				"rust",
+			})
+		elseif name == "blink.cmp" and kind ~= "delete" then
+			require("blink.cmp").build():wait(60000)
+		end
+	end,
 })
 
 -- Treesitter Autotag
@@ -200,59 +272,30 @@ capabilities = vim.tbl_deep_extend("force", capabilities, {
 	},
 })
 
-require("mason").setup()
+vim.lsp.config("*", { capabilities = capabilities })
 
 require("mason-lspconfig").setup({
-	handlers = {
-		function(server_name)
-			require("lspconfig")[server_name].setup({
-				capabilities = capabilities,
-			})
-		end,
-	},
+	automatic_enable = { exclude = { "ts_ls", "tsserver" } },
 })
 
 require("typescript-tools").setup({})
 
 require("blink.cmp").setup({
-	-- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)
-	-- 'super-tab' for mappings similar to vscode (tab to accept)
-	-- 'enter' for enter to accept
-	-- 'none' for no mappings
-	--
-	-- All presets have the following mappings:
-	-- C-space: Open menu or open docs if already open
-	-- C-n/C-p or Up/Down: Select next/previous item
-	-- C-e: Hide menu
-	-- C-k: Toggle signature help (if signature.enabled = true)
-	--
-	-- See :h blink-cmp-config-keymap for defining your own keymap
 	keymap = { preset = "default" },
-
 	appearance = {
-		-- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
-		-- Adjusts spacing to ensure icons are aligned
 		nerd_font_variant = "mono",
 	},
-
-	-- (Default) Only show the documentation popup when manually triggered
 	completion = { documentation = { auto_show = true } },
-
-	-- Default list of enabled providers defined so that you can extend it
-	-- elsewhere in your config, without redefining it, due to `opts_extend`
 	sources = {
 		default = { "lsp", "path", "snippets", "buffer" },
 	},
-
-	-- (Default) Rust fuzzy matcher for typo resistance and significantly better performance
-	-- You may use a lua implementation instead by using `implementation = "lua"` or fallback to the lua implementation,
-	-- when the Rust fuzzy matcher is not available, by using `implementation = "prefer_rust"`
-	--
-	-- See the fuzzy documentation for more information
 	fuzzy = { implementation = "lua" },
 })
 
--- Treesitter Context Commentstring
-require("ts_context_commentstring").setup({
-	enable_autocmd = false,
-})
+-- Comments
+require("ts-comments").setup()
+
+-- Outline
+vim.keymap.set("n", "<leader>l", "<cmd>Outline<CR>", { desc = "Toggle Outline" })
+
+require("outline").setup()
