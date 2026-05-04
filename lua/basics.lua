@@ -1,7 +1,7 @@
 -- Basic settings
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-vim.wo.wrap = false
+vim.opt.wrap = true
 vim.opt.cursorline = true
 vim.opt.ignorecase = true
 vim.opt.incsearch = true
@@ -22,7 +22,8 @@ vim.opt.laststatus = 3
 vim.opt.pumheight = 10
 vim.opt.scrolloff = 3
 vim.opt.sidescrolloff = 3
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.foldenable = false
 vim.opt.background = "dark"
 
@@ -37,10 +38,8 @@ vim.keymap.set("n", "vs", ":vs<CR>")
 vim.keymap.set("n", "<leader>j", ":cnext<CR>", { silent = true })
 vim.keymap.set("n", "<leader>k", ":cprevious<CR>", { silent = true })
 vim.keymap.set("n", "<leader>o", ":tabonly<cr>:only<CR>", { silent = true })
-vim.keymap.set("n", "<c-l>", "<c-w>l")
-vim.keymap.set("n", "<c-h>", "<c-w>h")
-vim.keymap.set("n", "<c-k>", "<c-w>k")
-vim.keymap.set("n", "<c-j>", "<c-w>j")
+vim.keymap.set("n", "j", "gj")
+vim.keymap.set("n", "k", "gk")
 
 -- Auto resize splits when the terminal's window is resized
 vim.api.nvim_create_autocmd({ "VimResized" }, {
@@ -54,4 +53,4 @@ vim.api.nvim_create_autocmd({ "VimResized" }, {
 })
 
 -- Global LSP mappings
-vim.keymap.set("n", "<space>e", vim.diagnostic.open_float)
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
