@@ -52,7 +52,6 @@ and focused on essential features for productive coding.
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) - Syntax highlighting and parsing
 - [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag) - Auto-close HTML/JSX tags
 - [oil.nvim](https://github.com/stevearc/oil.nvim) - File explorer
-- [outline.nvim](https://github.com/hedyhli/outline.nvim) - Symbol outline sidebar
 - [plenary.nvim](https://github.com/nvim-lua/plenary.nvim) - Lua utility library
 - [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim) - Render markdown in Neovim with LSP completions
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) - Fuzzy finder
@@ -133,7 +132,6 @@ Leader key is set to `Space`.
 ### General
 - `<C-S>` - Start search and replace
 - `<C-h/j/k/l>` - Navigate between splits (also works across tmux panes)
-- `<Space>l` - Toggle symbol outline
 
 ### File Navigation
 - `-` - Open Oil file explorer (parent directory)
