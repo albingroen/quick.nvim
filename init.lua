@@ -6,7 +6,6 @@ vim.pack.add({
 	"https://github.com/tpope/vim-sleuth",
 	"https://github.com/nvim-telescope/telescope.nvim",
 	"https://github.com/stevearc/oil.nvim",
-	-- { src = "https://github.com/rose-pine/neovim", name = "rose-pine" },
 	"https://github.com/tinted-theming/tinted-nvim",
 	"https://github.com/kylechui/nvim-surround",
 	"https://github.com/christoomey/vim-tmux-navigator",
@@ -24,7 +23,6 @@ vim.pack.add({
 	"https://github.com/saghen/blink.cmp",
 	"https://github.com/rafamadriz/friendly-snippets",
 	"https://github.com/folke/ts-comments.nvim",
-	"https://github.com/hedyhli/outline.nvim",
 })
 
 vim.api.nvim_create_autocmd("FileType", {
@@ -74,12 +72,6 @@ require("oil").setup({
 vim.keymap.set("n", "-", "<cmd>Oil<cr>", { desc = "Buffers" })
 
 -- Theme
--- require("rose-pine").setup({
--- 	variant = "moon",
--- })
---
--- vim.cmd.colorscheme("rose-pine")
-
 local theme_script_path = vim.fn.expand("~/.local/share/tinted-theming/tinty/base16-vim-colors-file.vim")
 
 local function file_exists(file_path)
@@ -102,10 +94,6 @@ if file_exists(theme_script_path) then
 		callback = handle_focus_gained,
 	})
 end
-
--- require("tinted-nvim").setup({
--- 	default_scheme = "base16-ayu-dark",
--- })
 
 -- Nvim Tmux Navigator
 vim.keymap.set("n", "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>")
@@ -294,8 +282,3 @@ require("blink.cmp").setup({
 
 -- Comments
 require("ts-comments").setup()
-
--- Outline
-vim.keymap.set("n", "<leader>l", "<cmd>Outline<CR>", { desc = "Toggle Outline" })
-
-require("outline").setup()
