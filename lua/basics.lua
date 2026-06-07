@@ -22,9 +22,6 @@ vim.opt.laststatus = 3
 vim.opt.pumheight = 10
 vim.opt.scrolloff = 3
 vim.opt.sidescrolloff = 3
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
-vim.opt.foldenable = false
 vim.opt.background = "dark"
 
 -- Basic mappings
