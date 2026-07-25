@@ -18,7 +18,6 @@ vim.pack.add({
 	"https://github.com/neovim/nvim-lspconfig",
 	"https://github.com/williamboman/mason.nvim",
 	"https://github.com/williamboman/mason-lspconfig.nvim",
-	"https://github.com/pmizio/typescript-tools.nvim",
 	"https://github.com/saghen/blink.lib",
 	"https://github.com/saghen/blink.cmp",
 	"https://github.com/rafamadriz/friendly-snippets",
@@ -262,11 +261,7 @@ capabilities = vim.tbl_deep_extend("force", capabilities, {
 
 vim.lsp.config("*", { capabilities = capabilities })
 
-require("mason-lspconfig").setup({
-	automatic_enable = { exclude = { "ts_ls", "tsserver" } },
-})
-
-require("typescript-tools").setup({})
+require("mason-lspconfig").setup()
 
 require("blink.cmp").setup({
 	keymap = { preset = "default" },
