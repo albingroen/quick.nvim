@@ -34,7 +34,6 @@ and focused on essential features for productive coding.
 - **Smart Editing**: Auto-pairs, auto-tags, context-aware commenting, and surround operations
 - **File Navigation**: Oil.nvim for buffer-like file exploration
 - **Tmux Integration**: Seamless navigation between Neovim splits and tmux panes
-- **TypeScript Enhanced**: Dedicated TypeScript tools with auto-import support
 - **Minimal UI**: Clean interface with Which-key for discoverable keybindings
 
 ## Plugins
@@ -56,7 +55,6 @@ and focused on essential features for productive coding.
 - [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim) - Render markdown in Neovim with LSP completions
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) - Fuzzy finder
 - [ts-comments.nvim](https://github.com/folke/ts-comments.nvim) - Context-aware commenting for Neovim's built-in commenting
-- [typescript-tools.nvim](https://github.com/pmizio/typescript-tools.nvim) - Enhanced TypeScript support
 - [vim-sleuth](https://github.com/tpope/vim-sleuth) - Auto-detect indentation
 - [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) - Seamless navigation between tmux panes and Neovim splits
 
@@ -112,6 +110,7 @@ These are the language servers I use. Obviously, feel free to install whichever
 ones you want.
 
 - lua-language-server (lua_ls)
+- typescript-language-server (ts_ls)
 - pyright (Python)
 - eslint-lsp (eslint)
 - stylelint-lsp (stylelint_lsp)
@@ -120,10 +119,6 @@ ones you want.
 #### Formatters
 - prettierd (JavaScript/TypeScript/HTML/CSS/JSON)
 - stylua (Lua)
-
-Note: The configuration uses `typescript-tools.nvim` for TypeScript/JavaScript language 
-server support with enhanced features like auto-import, so you don't need to install 
-typescript-language-server separately.
 
 ## Key Mappings
 
@@ -147,7 +142,6 @@ Leader key is set to `Space`.
 - `gr` - Go to references
 - `<Space>rn` - Rename symbol
 - `<Space>.` - Code actions
-- `<Space>i` - Add missing imports (TypeScript)
 - `<Space>e` - Show diagnostics for current line
 - `<Space>d` - Show all diagnostics
 
