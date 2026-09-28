@@ -28,7 +28,7 @@ and focused on essential features for productive coding.
 
 - **Fast Completion**: Uses Blink.cmp with Rust-based fuzzy matching for blazing fast completions
 - **LSP Integration**: Native Neovim LSP with Mason for easy language server management
-- **Smart Formatting**: Auto-format on save with Conform.nvim supporting multiple formatters
+- **Smart Formatting**: Auto-format on save with Conform.nvim, using oxfmt (oxc) for web languages
 - **Git Integration**: Gitsigns for inline git blame, diff viewing, and hunk management
 - **Fuzzy Finding**: Telescope with Ivy theme for finding files, grepping, and more
 - **Smart Editing**: Auto-pairs, auto-tags, context-aware commenting, and surround operations
@@ -112,13 +112,15 @@ ones you want.
 - lua-language-server (lua_ls)
 - typescript-language-server (ts_ls)
 - pyright (Python)
-- eslint-lsp (eslint)
+- oxlint (oxc, JavaScript/TypeScript linting)
 - stylelint-lsp (stylelint_lsp)
 - tailwindcss-language-server (tailwindcss)
 
 #### Formatters
-- prettierd (JavaScript/TypeScript/HTML/CSS/JSON)
+- oxfmt (JavaScript/TypeScript/JSON/CSS/GraphQL/Svelte/HTML)
+- djlint (HTML)
 - stylua (Lua)
+- black (Python)
 
 ## Key Mappings
 
